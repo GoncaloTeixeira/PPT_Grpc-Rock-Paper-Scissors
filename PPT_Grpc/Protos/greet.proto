@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+option csharp_namespace = "PPT_Grpc";
+
+package greet;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc Nome (EnviarNome) returns (EnviarDados);
+  rpc Jogar (EnviarJogada) returns (EnviarResultado);
+
+
+}
+
+
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+message EnviarNome {
+  string Nome = 1;
+}
+message EnviarDados {
+  string Nome = 1;
+  int32 Vitorias=2;
+  int32 Empates=3;
+  int32 Derrotas=4;
+
+}
+
+
+message EnviarJogada{
+ string Nome=1;
+	string Jogada=2;
+}
+
+message ReceberJogada{
+	string Jogada=1;
+}
+
+message EnviarResultado{
+	string Resultado=1;
+	int32 Vitorias = 2;
+	int32 Empates=3;
+	int32 Derrotas=4;
+}
+message ReceberResultado{
+	string Resultado=1;
+	int32 Vitorias=2;
+	int32 Empates=3;
+	int32 Derrotas=4;
+}
+
+
+//Metodos para o cliente
+
+

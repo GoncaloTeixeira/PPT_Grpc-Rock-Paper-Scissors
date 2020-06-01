@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "PPT_Grpc": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "http://TesteServer.epizy.com",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+
+  
+}
